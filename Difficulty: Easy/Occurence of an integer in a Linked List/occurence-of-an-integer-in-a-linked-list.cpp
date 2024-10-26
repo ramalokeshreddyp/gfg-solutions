@@ -31,13 +31,14 @@ class Solution {
   public:
     int count(struct Node* head, int key) {
         // add your code here
-    multiset<int>ms;
+        int cnt=0;
     Node *temp=head;
     while(temp!=NULL){
-        ms.insert(temp->data);
+        if(temp->data==key){
+            cnt++;
+        }
         temp=temp->next;
     }
-    int cnt=ms.count(key);
     return cnt;
     }
 };
@@ -68,6 +69,7 @@ int main() {
         cin.ignore();
         Solution ob;
         cout << ob.count(head, key) << endl;
+        cout << "~" << endl;
     }
     return 0;
 }
