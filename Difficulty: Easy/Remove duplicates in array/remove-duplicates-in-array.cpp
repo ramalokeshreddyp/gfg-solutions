@@ -8,17 +8,16 @@ class Solution {
   public:
     vector<int> removeDuplicate(vector<int>& arr) {
         // code here
-    set<int>s;
-    for(auto it=arr.begin();it!=arr.end();it++){
-        if(s.find(*it)==s.end()){
-            s.insert(*it);
+        set<int>s;
+        for(auto it=arr.begin();it!=arr.end();it++){
+            if(s.find(*it)==s.end()){
+                s.insert(*it);
+            }
+            else{
+                arr.erase(it);
+                it--;
+            }
         }
-        else{
-            arr.erase(it);
-            it--;
-        }
-    }
-       
         return arr;
     }
 };
