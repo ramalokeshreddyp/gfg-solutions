@@ -29,7 +29,7 @@ Node* buildTree(string str) {
     for (string str; iss >> str;)
         ip.push_back(str);
 
-    // Create the root of the tree.....
+    // Create the root of the tree
     Node* root = new Node(stoi(ip[0]));
 
     // Push the root to the queue
@@ -116,6 +116,7 @@ class Solution {
    
 };
 
+
 //{ Driver Code Starts.
 int main() {
 
@@ -137,7 +138,7 @@ int main() {
         for (int i = 0; i < vec.size(); i++)
             cout << vec[i] << " ";
         cout << endl;
-        /// cout<<"~"<<endl;
+        cout << "~" << endl;
     }
     return 0;
 }
