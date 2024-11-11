@@ -8,20 +8,21 @@ using namespace std;
 
 class Solution {
   public:
-    int minIncrements(vector<int> arr) {
+    int minIncrements(vector<int>& arr) {
         // Code here
-        sort(arr.begin(), arr.end());
-        
-        int increments = 0;
-        for (int i = 1; i < arr.size(); i++) {
-            if (arr[i] <= arr[i - 1]) {
-                int required = arr[i - 1] + 1;
-                increments += required - arr[i];
-                arr[i] = required; 
+        sort(arr.begin(),arr.end());
+        int inc=0;
+        for(int i=1;i<arr.size();i++){
+            if(arr[i]<=arr[i-1]){
+                int req=arr[i-1]+1;
+                inc+=req-arr[i];
+                arr[i]=req;
             }
         }
+        return inc;
+    
         
-        return increments;
+      
     }
 };
 
@@ -44,6 +45,7 @@ int main() {
         Solution ob;
         int ans = ob.minIncrements(a);
         cout << ans << endl;
+        cout << "~" << endl;
     }
     return 0;
 }
