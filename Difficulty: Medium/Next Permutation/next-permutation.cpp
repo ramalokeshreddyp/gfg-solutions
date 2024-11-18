@@ -10,7 +10,7 @@ class Solution {
   public:
     void nextPermutation(vector<int>& arr) {
         // code here
-          std::next_permutation(arr.begin(), arr.end());
+        next_permutation(arr.begin(),arr.end());
     }
 };
 
