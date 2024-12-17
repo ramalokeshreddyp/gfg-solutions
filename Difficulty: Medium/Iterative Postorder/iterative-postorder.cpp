@@ -123,6 +123,7 @@ class Solution{
     }
 };
 
+
 //{ Driver Code Starts.
 
 /* Driver program to test size function*/
@@ -149,7 +150,9 @@ int main() {
 
         cout << endl;
      
-    }
+    
+cout << "~" << "\n";
+}
     return 0;
 }
 
