@@ -40,6 +40,7 @@ class Solution {
 };
 
 
+
 //{ Driver Code Starts.
 int main() {
     int t;
@@ -58,7 +59,7 @@ int main() {
         }
 
         Solution ob;
-        long long res = ob.trappingWater(arr);
+        int res = ob.trappingWater(arr);
 
         cout << res << endl << "~" << endl;
     }
