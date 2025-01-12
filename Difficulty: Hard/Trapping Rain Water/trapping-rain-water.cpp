@@ -6,12 +6,10 @@ using namespace std;
 
 // } Driver Code Ends
 class Solution {
-
-    // Function to find the trapped water between the blocks.
   public:
-    long long trappingWater(vector<int> &arr) {
+    int maxWater(vector<int> &arr) {
         // code here
-  int n = arr.size();
+         int n = arr.size();
         if (n < 3) return 0; 
 
         int left = 0, right = n - 1;
@@ -39,8 +37,6 @@ class Solution {
     }
 };
 
-
-
 //{ Driver Code Starts.
 int main() {
     int t;
@@ -59,7 +55,7 @@ int main() {
         }
 
         Solution ob;
-        int res = ob.trappingWater(arr);
+        int res = ob.maxWater(arr);
 
         cout << res << endl << "~" << endl;
     }
