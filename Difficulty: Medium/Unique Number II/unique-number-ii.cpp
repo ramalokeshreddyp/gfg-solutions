@@ -8,23 +8,19 @@ using namespace std;
 class Solution {
   public:
     vector<int> singleNum(vector<int>& arr) {
-    int xorAll = 0;
-    for (int num : arr) {
-        xorAll ^= num;
-    }
-
-    int rightmostBit = xorAll & -xorAll;
-
-    int x = 0, y = 0;
-    for (int num : arr) {
-        if (num & rightmostBit)
-            x ^= num;
-        else
-            y ^= num;
-    }
-
-    if (x > y) swap(x, y);
-    return {x, y};
+      unordered_map<int,int>mpp;
+        vector<int>v;
+        for(int i=0;i<arr.size();i++){
+            mpp[arr[i]]++;
+            
+        }
+        for(auto it:mpp){
+            if(it.second==1){
+                v.push_back(it.first);
+            }
+        }
+        sort(v.begin(),v.end());
+        return v;
 }
 
 };
